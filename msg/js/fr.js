@@ -6,6 +6,45 @@ goog.provide('Blockly.Msg.fr');
 
 goog.require('Blockly.Msg');
 
+//EasyFlap
+Blockly.Msg.EASYFLAP_GET = "obtenir";
+
+Blockly.Msg.EASYFLAP_DATE_YEAR = "année";
+Blockly.Msg.EASYFLAP_DATE_MONTH = "mois";
+Blockly.Msg.EASYFLAP_DATE_DAY = "jour";
+Blockly.Msg.EASYFLAP_DATE_HOUR = "heure";
+Blockly.Msg.EASYFLAP_DATE_MINUTE = "minute";
+Blockly.Msg.EASYFLAP_DATE_SECOND = "seconde";
+Blockly.Msg.EASYFLAP_DATE_MILLISECOND = "milliseconde";
+
+Blockly.Msg.EASYFLAP_TODAY = "aujourd'hui";
+Blockly.Msg.EASYFLAP_MONDAY = "lundin";
+Blockly.Msg.EASYFLAP_TUESDAY = "mardi";
+Blockly.Msg.EASYFLAP_WEDNESDAY = "mercredi";
+Blockly.Msg.EASYFLAP_THURSDAY = "jeudi";
+Blockly.Msg.EASYFLAP_FRIDAY = "vendredi";
+Blockly.Msg.EASYFLAP_SATURDAY = "samedi";
+Blockly.Msg.EASYFLAP_SUNDAY = "dimanche";
+
+Blockly.Msg.EASYFLAP_DEGREES = "degrés";
+Blockly.Msg.EASYFLAP_SHUTTER = "volet";
+Blockly.Msg.EASYFLAP_SHUTTER_OPEN_AT = "à";
+Blockly.Msg.EASYFLAP_SHUTTER_OPEN = "ouvrir le volet";
+Blockly.Msg.EASYFLAP_SHUTTER_CLOSE = "fermer le volet";
+Blockly.Msg.EASYFLAP_SHUTTER_OF = "du";
+
+Blockly.Msg.EASYFLAP_RUN_EVERY = "exécuter chaque";
+//End EasyFlap
+
+//Switch
+Blockly.Msg.CONTROLS_SWITCH_HELPURL = "https://fr.wikipedia.org/wiki/Switch_(instruction)";
+Blockly.Msg.CONTROLS_SWITCH_VAR_TITLE = "Tester";
+Blockly.Msg.CONTROLS_SWITCH_VAR_TAIL = "";
+Blockly.Msg.CONTROLS_SWITCH_MSG_CASEBREAK = "cas";
+Blockly.Msg.CONTROLS_SWITCH_MSG_DO = "faire";
+Blockly.Msg.CONTROLS_SWITCH_MSG_DEFAULT = "defaut";
+//End Switch
+
 Blockly.Msg.ADD_COMMENT = "Ajouter un commentaire";
 Blockly.Msg.AUTH = "Veuillez autoriser cette application à permettre la sauvegarde de votre travail et à l’autoriser à la partager.";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Modifier la valeur :";

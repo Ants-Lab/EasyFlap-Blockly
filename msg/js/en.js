@@ -6,6 +6,45 @@ goog.provide('Blockly.Msg.en');
 
 goog.require('Blockly.Msg');
 
+//EasyFlap
+Blockly.Msg.EASYFLAP_GET = "get";
+
+Blockly.Msg.EASYFLAP_DATE_YEAR = "year";
+Blockly.Msg.EASYFLAP_DATE_MONTH = "month";
+Blockly.Msg.EASYFLAP_DATE_DAY = "day";
+Blockly.Msg.EASYFLAP_DATE_HOUR = "hour";
+Blockly.Msg.EASYFLAP_DATE_MINUTE = "minute";
+Blockly.Msg.EASYFLAP_DATE_SECOND = "second";
+Blockly.Msg.EASYFLAP_DATE_MILLISECOND = "millisecond";
+
+Blockly.Msg.EASYFLAP_TODAY = "today";
+Blockly.Msg.EASYFLAP_MONDAY = "monday";
+Blockly.Msg.EASYFLAP_TUESDAY = "tuesday";
+Blockly.Msg.EASYFLAP_WEDNESDAY = "wednesday";
+Blockly.Msg.EASYFLAP_THURSDAY = "thursday";
+Blockly.Msg.EASYFLAP_FRIDAY = "friday";
+Blockly.Msg.EASYFLAP_SATURDAY = "saturday";
+Blockly.Msg.EASYFLAP_SUNDAY = "sunday";
+
+Blockly.Msg.EASYFLAP_DEGREES = "degrees";
+Blockly.Msg.EASYFLAP_SHUTTER = "shutter";
+Blockly.Msg.EASYFLAP_SHUTTER_OPEN_AT = "at";
+Blockly.Msg.EASYFLAP_SHUTTER_OPEN = "open the shutter";
+Blockly.Msg.EASYFLAP_SHUTTER_CLOSE = "close the shutter";
+Blockly.Msg.EASYFLAP_SHUTTER_OF = "of";
+
+Blockly.Msg.EASYFLAP_RUN_EVERY = "run every";
+//End EasyFlap
+
+//Switch
+Blockly.Msg.CONTROLS_SWITCH_HELPURL = "https://en.wikipedia.org/wiki/Switch_statement";
+Blockly.Msg.CONTROLS_SWITCH_VAR_TITLE = "Switch";
+Blockly.Msg.CONTROLS_SWITCH_VAR_TAIL = "";
+Blockly.Msg.CONTROLS_SWITCH_MSG_CASEBREAK = "case";
+Blockly.Msg.CONTROLS_SWITCH_MSG_DO = "do";
+Blockly.Msg.CONTROLS_SWITCH_MSG_DEFAULT = "default";
+//End Switch
+
 Blockly.Msg.ADD_COMMENT = "Add Comment";
 Blockly.Msg.AUTH = "Please authorize this app to enable your work to be saved and to allow it to be shared by you.";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Change value:";
