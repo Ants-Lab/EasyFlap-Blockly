@@ -1,8 +1,5 @@
 # Blockly
 
-Google's Blockly is a web-based, visual programming editor.  Users can drag
-blocks together to build programs.  All code is free and open source.
+Give instructions to your home automated shutters thanks to *[EasyFlap](https://github.com/Ants-Lab/EasyFlap)* and [Google Blockly](https://developers.google.com/blockly/)
 
-**The project page is https://developers.google.com/blockly/**
-
-![](https://developers.google.com/blockly/sample.png)
+![](media/example.png)
