@@ -33,6 +33,11 @@ Blockly.Msg.EASYFLAP_SHUTTER_OPEN = "ouvrir le volet";
 Blockly.Msg.EASYFLAP_SHUTTER_CLOSE = "fermer le volet";
 Blockly.Msg.EASYFLAP_SHUTTER_OF = "du";
 
+Blockly.Msg.EASYFLAP_CAPTOR_BRIGHTNESS = "luminosité";
+Blockly.Msg.EASYFLAP_CAPTOR_ANGLE = "angle";
+Blockly.Msg.EASYFLAP_CAPTOR_TEMPERATURE = "température";
+Blockly.Msg.EASYFLAP_CAPTOR_HUMIDITY = "humidité";
+
 Blockly.Msg.EASYFLAP_RUN_EVERY = "exécuter chaque";
 //End EasyFlap
 
@@ -93,7 +98,7 @@ Blockly.Msg.CONTROLS_IF_TOOLTIP_2 = "Si une valeur est vraie, alors exécuter le
 Blockly.Msg.CONTROLS_IF_TOOLTIP_3 = "Si la première valeur est vraie, alors exécuter le premier bloc d’ordres. Sinon, si la seconde valeur est vraie, exécuter le second bloc d’ordres.";
 Blockly.Msg.CONTROLS_IF_TOOLTIP_4 = "Si la première valeur est vraie, alors exécuter le premier bloc d’ordres. Sinon, si la seconde valeur est vraie, exécuter le second bloc d’ordres. Si aucune des valeurs n’est vraie, exécuter le dernier bloc d’ordres.";
 Blockly.Msg.CONTROLS_REPEAT_HELPURL = "http://fr.wikipedia.org/wiki/Boucle_for";
-Blockly.Msg.CONTROLS_REPEAT_INPUT_DO = "faire";
+Blockly.Msg.CONTROLS_REPEAT_INPUT_DO = "alors";
 Blockly.Msg.CONTROLS_REPEAT_TITLE = "répéter %1 fois";
 Blockly.Msg.CONTROLS_REPEAT_TOOLTIP = "Exécuter certains ordres plusieurs fois.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_HELPURL = "https://github.com/google/blockly/wiki/Loops#repeat";  // untranslated

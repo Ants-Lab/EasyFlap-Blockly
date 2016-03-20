@@ -15,15 +15,15 @@ Blockly.Blocks['ef_runevery'] = {
         .appendField(Blockly.Msg.EASYFLAP_RUN_EVERY);
     this.appendDummyInput()
         .appendField(new Blockly.FieldDropdown([
-			[Blockly.Msg.EASYFLAP_DATE_DAY, "day"],
-			[Blockly.Msg.EASYFLAP_DATE_HOUR, "hour"],
-			[Blockly.Msg.EASYFLAP_DATE_MINUTE, "minute"]
+			[Blockly.Msg.EASYFLAP_DATE_DAY, '86400'],
+			[Blockly.Msg.EASYFLAP_DATE_HOUR, '3600'],
+			[Blockly.Msg.EASYFLAP_DATE_MINUTE, '60']
 		]), "seconds");
-    this.appendStatementInput("time");
+    this.appendStatementInput("TIME");
     this.setInputsInline(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
-    this.setColour(EASYFLAP_BLOCK_COLOR);
+this.setColour(EASYFLAP_BLOCK_COLOR);
     this.setTooltip('');
     this.setHelpUrl('http://www.example.com/');
   }
@@ -32,7 +32,12 @@ Blockly.Blocks['ef_runevery'] = {
 Blockly.Blocks['ef_getcaptorvalue'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([["angle", "1"], ["luminosité", "2"], ["température", "3"], ["humidité", "4"]]), "variable");
+        .appendField(new Blockly.FieldDropdown([
+			[Blockly.Msg.EASYFLAP_CAPTOR_ANGLE, "position"],
+			[Blockly.Msg.EASYFLAP_CAPTOR_BRIGHTNESS, "brightness"],
+			[Blockly.Msg.EASYFLAP_CAPTOR_TEMPERATURE, "temperature"],
+			[Blockly.Msg.EASYFLAP_CAPTOR_HUMIDITY, "humidity"]]),
+		"variable");
     this.appendDummyInput()
         .appendField(Blockly.Msg.EASYFLAP_SHUTTER_OF + " " + Blockly.Msg.EASYFLAP_SHUTTER);
     this.appendValueInput("SHUTTER")
@@ -67,13 +72,16 @@ Blockly.Blocks['ef_setangle'] = {
 };
 
 Blockly.Blocks['ef_shutters'] = {
-  init: function() {
+	init: function() {
+
+		var shutters = [];
+
+		config.shutters.forEach(function(shutter, idx) {
+			shutters.push([shutter.loc, idx]);
+		});
+
     this.appendDummyInput()
-        .appendField(new Blockly.FieldDropdown([
-			["Salon", "SHUTTER_1"],
-			["Chambre parentale", "SHUTTER_2"],
-			["Cuisine", "SHUTTER_3"]
-		]), "SHUTTERS");
+        .appendField(new Blockly.FieldDropdown(shutters), "SHUTTERS");
     this.setInputsInline(true);
     this.setOutput(true, "Shutter");
     this.setColour(EASYFLAP_BLOCK_COLOR);
@@ -89,7 +97,8 @@ Blockly.Blocks['ef_close_shutter'] = {
     this.appendValueInput("SHUTTER")
         .setCheck("Shutter");
     this.setInputsInline(true);
-    this.setPreviousStatement(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
     this.setColour(EASYFLAP_BLOCK_COLOR);
     this.setTooltip('');
     this.setHelpUrl('http://www.example.com/');

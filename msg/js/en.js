@@ -33,6 +33,11 @@ Blockly.Msg.EASYFLAP_SHUTTER_OPEN = "open the shutter";
 Blockly.Msg.EASYFLAP_SHUTTER_CLOSE = "close the shutter";
 Blockly.Msg.EASYFLAP_SHUTTER_OF = "of";
 
+Blockly.Msg.EASYFLAP_CAPTOR_BRIGHTNESS = "brightness";
+Blockly.Msg.EASYFLAP_CAPTOR_ANGLE = "angle";
+Blockly.Msg.EASYFLAP_CAPTOR_TEMPERATURE = "temperature";
+Blockly.Msg.EASYFLAP_CAPTOR_HUMIDITY = "humidity";
+
 Blockly.Msg.EASYFLAP_RUN_EVERY = "run every";
 //End EasyFlap
 

@@ -4,26 +4,26 @@ goog.require('Blockly.JavaScript');
 
 Blockly.JavaScript['ef_getcaptorvalue'] = function (block) {
   var dropdown_variable = block.getFieldValue('variable');
-  var dropdown_shutter = block.getFieldValue('SHUTTER');
+  var dropdown_shutter = Blockly.JavaScript.valueToCode(block, 'SHUTTER', Blockly.JavaScript.ORDER_ATOMIC);
   
-  var code = 'getCaptorValue(' + dropdown_shutter + ', ' + dropdown_variable + ')';
+  var code = 'EasyFlap.getCaptorValue(' + dropdown_shutter + ', "' + dropdown_variable + '")';
   
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 
 Blockly.JavaScript['ef_runevery'] = function(block) {
   var dropdown_seconds = block.getFieldValue('seconds');
-  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var statements = Blockly.JavaScript.statementToCode(block, 'TIME');
+
+  var code = 'Blockly.runEvery(function(' + dropdown_seconds + ') {\n ' + statements + ' \n});\n';
   return code;
 };
 
 Blockly.JavaScript['ef_setangle'] = function(block) {
-  var dropdown_captor = block.getFieldValue('captor');
+  var dropdown_shutter = Blockly.JavaScript.valueToCode(block, 'SHUTTER', Blockly.JavaScript.ORDER_ATOMIC) || 0;
   var value_angle = Blockly.JavaScript.valueToCode(block, 'angle', Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+
+  var code = 'EasyFlap.setAngle(' + dropdown_shutter + ', ' + value_angle + ');\n';
   return code;
 };
 
@@ -71,24 +71,17 @@ Blockly.JavaScript['ef_weekdays'] = function(block) {
 };
 
 Blockly.JavaScript['ef_shutters'] = function(block) {
-  var dropdown_shutters = block.getFieldValue('SHUTTERS');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...';
-  // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.JavaScript.ORDER_NONE];
+		
+  return block.getFieldValue('SHUTTERS');
 };
 
 Blockly.JavaScript['ef_close_shutter'] = function(block) {
-  var value_shutter = Blockly.JavaScript.valueToCode(block, 'SHUTTER', Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = 'closeShutter(' + value_shutter + ')';
-  // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.JavaScript.ORDER_NONE];
+	var value_shutter = Blockly.JavaScript.valueToCode(block, 'SHUTTER', Blockly.JavaScript.ORDER_ATOMIC) || 0;
+
+  	return 'EasyFlap.closeShutter(' + value_shutter + ');\n';
 };
 
 Blockly.JavaScript['ef_shutter_list'] = function(block) {
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...';
-  // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.JavaScript.ORDER_NONE];
+
+	return ['EasyFlap.Shutters', Blockly.JavaScript.ORDER_NONE];
 };
